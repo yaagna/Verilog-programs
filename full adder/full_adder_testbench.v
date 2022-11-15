@@ -11,7 +11,7 @@ module testbench;
         .a(a),
         .b(b),
         .cin(cin)
-    )
+    );
 
     initial 
     begin
