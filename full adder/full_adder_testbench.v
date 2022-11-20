@@ -1,4 +1,4 @@
-//Test bench for halfadder
+//Test bench for fulladder
 `include "full_adder.v"
 
 module testbench;
