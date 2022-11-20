@@ -1,0 +1,103 @@
+$date
+	Mon Nov 21 00:11:00 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbench $end
+$var wire 1 ! diff $end
+$var wire 1 " bout $end
+$var reg 1 # a $end
+$var reg 1 $ b $end
+$var reg 1 % bin $end
+$scope module sub1 $end
+$var wire 1 # a $end
+$var wire 1 $ b $end
+$var wire 1 % bin $end
+$var wire 1 " bout $end
+$var wire 1 & y $end
+$var wire 1 ' x $end
+$var wire 1 ( w $end
+$var wire 1 ! diff $end
+$scope module h1 $end
+$var wire 1 # A $end
+$var wire 1 $ B $end
+$var wire 1 ' Borrow $end
+$var wire 1 ( Diff $end
+$var wire 1 ) inverse_A $end
+$upscope $end
+$scope module h2 $end
+$var wire 1 ( A $end
+$var wire 1 % B $end
+$var wire 1 & Borrow $end
+$var wire 1 ! Diff $end
+$var wire 1 * inverse_A $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+1*
+1)
+0(
+0'
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#2
+1!
+0*
+1"
+1(
+1'
+1$
+#4
+0"
+0'
+0)
+0$
+1#
+#6
+0!
+1*
+0(
+1$
+#8
+1"
+1!
+1&
+1)
+1%
+0$
+0#
+#10
+0&
+0!
+0*
+1(
+1'
+1$
+#12
+0"
+0'
+0)
+0$
+1#
+#14
+1"
+1&
+1!
+1*
+0(
+1$
