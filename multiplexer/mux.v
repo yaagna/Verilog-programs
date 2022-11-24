@@ -1,4 +1,4 @@
-module mux()
+module mux();
     input 
     output
 
