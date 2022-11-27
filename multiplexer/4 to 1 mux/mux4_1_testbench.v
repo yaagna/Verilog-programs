@@ -30,4 +30,4 @@ module testbench
 endmodule
 
 //iverilog -o mux4_1_testbench.vvp mux4_1_testbench.v
-//vvp mux4_1_testbench.vvp//
+//vvp mux4_1_testbench.vvp
