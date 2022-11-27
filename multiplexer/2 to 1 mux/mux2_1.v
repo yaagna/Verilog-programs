@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-module mux2_1(i0, i1, s, y);
-=======
+
 // Verilog 2 to 1 Multiplexer program using behavioural model
 
-module (i0, i1, s, y);
->>>>>>> e0d79a28f45042b79c72f933d82103f3c713347e
+module mux2_1(i0, i1, s, y);
     input wire i0, i1, s;
     output reg y;
 
