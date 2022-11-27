@@ -1,3 +1,5 @@
+// Verilog half subtractor program using gate model
+
 module half_sub(a, b, diff, borrow);
     input a, b;
     output diff, borrow;

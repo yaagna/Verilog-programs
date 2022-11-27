@@ -1,3 +1,5 @@
+// Verilog full subtractor program using gate model
+
 module full_sub(a, b, diff, bin, bout);
     input a, b, bin;
     output diff, bout;
