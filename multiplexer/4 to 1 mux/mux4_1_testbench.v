@@ -1,11 +1,11 @@
 //Testbench for 4 to 1 multiplexer
 `include "mux4_1.v"
 
-module testbench
+module testbench;
     wire y;
     reg i0, i1, i2, i3, s0, s1;
-
     mux4_1 name(.y(y), .i0(i0), .i1(i1), .i2(i2), .i3(i3), .s0(s0), .s1(s1));
+    
     initial
     begin
         $dumpfile("mux4_1.vcd");
