@@ -2,7 +2,7 @@
 
 module (i0, i1, s, y);
     input wire i0, i1, s;
-    output y;
+    output reg y;
 
     always @(i0 or i1 or s)
     begin
