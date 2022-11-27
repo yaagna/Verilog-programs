@@ -20,3 +20,6 @@ module testbench;
     always @(i0 or i1 or s)
     $monitor("At time = %t, Output = %d", $time, out);
 endmodule
+
+//iverilog -o mux2_1_testbench.vvp mux2_1_testbench.v
+//vvp mux2_1_testbench.vvp
