@@ -1,4 +1,3 @@
-
 // Verilog 2 to 1 Multiplexer program using behavioural model
 
 module mux2_1(i0, i1, s, y);
