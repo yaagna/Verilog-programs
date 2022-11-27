@@ -1,3 +1,5 @@
+// Verilog half adder program using gate model
+
 module half_adder(a, b, sum, carry);
     input a, b;
     output sum, carry;
