@@ -1,3 +1,6 @@
+//Testbench for 2 to 1 multiplexer
+`include "mux2_1.v"
+
 module testbench;
     wire out;
     reg i0, i1, s;
