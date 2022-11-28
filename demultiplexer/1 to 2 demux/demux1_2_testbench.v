@@ -5,7 +5,12 @@ module testbench;
     reg i, s;
     wire [1:0] y;
 
-    demux
+    demux1_2 demux(.i(i), .s(s), .y(y));
+
+    initial
+    begin
+        
+    end
 endmodule
 
 //iverilog -o demux1_2_testbench.vvp demux1_2_testbench.v
