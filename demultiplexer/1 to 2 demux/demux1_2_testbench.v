@@ -9,8 +9,10 @@ module testbench;
 
     initial
     begin
-        
+        s = 0;
+        i = 0;
     end
+    always #2 s = s + 1'b1;
 endmodule
 
 //iverilog -o demux1_2_testbench.vvp demux1_2_testbench.v
