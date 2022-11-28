@@ -9,8 +9,11 @@ module testbench;
 
     initial
     begin
+        $dumpfile("demux1_2.vcd");
+        $dumpvars(0, testbench);
+        
         s = 0;
-        i = 0;
+        i = 1;
     end
     always #2 s = s + 1'b1;                 //every 2 seconds, toggle select pin
     initial #10 $finish;
