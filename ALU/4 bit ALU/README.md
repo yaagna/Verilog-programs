@@ -1,3 +1,3 @@
--ALU is an acronym of Arithmetic Logic Unit.
--ALU is a combinational circuit that performs arithmetic and logic operations on binary numbers.
--It is the heart of the CPU.
+- ALU is an acronym of Arithmetic Logic Unit.
+- ALU is a combinational circuit that performs arithmetic and logic operations on binary numbers.
+- It is the heart of the CPU.
