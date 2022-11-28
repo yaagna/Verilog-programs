@@ -12,7 +12,7 @@ module testbench;
         s = 0;
         i = 0;
     end
-    always #2 s = s + 1'b1;
+    always #2 s = s + 1'b1;                 //every 2 seconds, toggle select pin
 endmodule
 
 //iverilog -o demux1_2_testbench.vvp demux1_2_testbench.v
