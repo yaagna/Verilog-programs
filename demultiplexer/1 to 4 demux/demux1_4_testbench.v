@@ -8,5 +8,18 @@ module testbench;
 
     demux1_4 demux(i, s, y);
 
-    
+    initial
+    begin
+        $dumpfile("demux1_4.vcd");
+        $dumpvars(0, testbench);
+
+        i = 1;
+        s = 2'b00;
+        #1 s = 2'b01;
+        #1 s = 2'b10;
+        #1 s = 2'b11;
+    end    
 endmodule
+
+//iverilog -o demux1_4_testbench.vvp demux1_4_testbench.v
+//vvp demux1_4_testbench.vvp
