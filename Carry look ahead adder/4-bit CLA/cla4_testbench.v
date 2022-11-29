@@ -15,10 +15,14 @@ module testbench;
         $dumpvars(0, testbench);
         $display("RSLT\ta\tb\tcin\t\tcout\ty");
 
-        #50 a = 0; b = 0; cin = 0;
-        #50 a = 3; b = 2; cin = 1;
-        #50 a = 7; b = 10; cin = 0;
-        #50 a = 15; b = 15; cin = 1;
+        a = 4'b0000; b = 4'b0000; cin = 1'b0;
+        #50 a = 4'b0100; b = 4'b0011; cin = 1'b1;
+        #50 a = 4'b1100; b = 4'b0011; cin = 1'b0;
+        #50 a = 4'b1111; b = 4'b1111; cin = 1'b1;
+        #50;
     end
 
 endmodule
+
+// iverilog -o cla4_testbench.vvp cla4_testbench.v
+// vvp cla4_testbench.vvp
