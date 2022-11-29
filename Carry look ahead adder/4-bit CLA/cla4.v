@@ -9,5 +9,6 @@ module cla4(a, b, cin, cout, y);
     wire [3:0] g, p;                // generate and propagate signals
     wire [4:0] c;                   // intermediate carry signals between stages
 
+    assign y[0] = a[0] ^ b[0] ^ cin;
     
 endmodule
