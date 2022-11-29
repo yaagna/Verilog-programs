@@ -6,7 +6,7 @@ module cla4(a, b, cin, cout, y);
     output cout;
     output [3:0] y;
 
-    wire [3:0] g, p;                // generate and propagate signals
+    //wire [3:0] g, p;                // generate and propagate signals
     wire [4:0] c;                   // intermediate carry signals between stages
 
     assign c[0] = cin;
@@ -16,4 +16,11 @@ module cla4(a, b, cin, cout, y);
     assign y[1] = a[1] ^ b[1] ^ c[1];
 
     assign c[2] = ((a[1] & b[1]) | ((a[1] | b[1]) & ((a[0] & b[0]) | ((a[0] | b[0]) & c[0]))));
+    assign y[2] = a[2] ^ b[2] ^ c[2];
+
+    assign c[3] = ((a[2] & b[2]) | ((a[2] | b[2]) & ((a[1] & b[1]) | ((a[1] | b[1]) & ((a[0] & b[0]) | ((a[0] | b[0]) & c[0]))))));
+    assign y[3] = a[3] ^ b[3] ^ c[3];
+
+    assign c[4] = ((a[3] & b[3]) | ((a[3] | b[3]) & ((a[2] & b[2]) | ((a[2] | b[2]) & ((a[1] & b[1]) | ((a[1] | b[1]) & ((a[0] & b[0]) | ((a[0] | b[0]) & c[0]))))))));
+    assign cout = c[4];
 endmodule
