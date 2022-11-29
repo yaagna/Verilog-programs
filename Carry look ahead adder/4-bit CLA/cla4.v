@@ -1,4 +1,5 @@
 // Verilog program of 4 bit carry look ahead adder
+`timescale 1ns/1ps
 
 module cla4(a, b, cin, cout, y);
     input [3:0] a, b;
