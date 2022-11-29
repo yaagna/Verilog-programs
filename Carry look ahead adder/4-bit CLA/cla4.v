@@ -6,4 +6,8 @@ module cla4(a, b, cin, cout, y);
     output cout;
     output [3:0] y;
 
+    wire [3:0] g, p;                // generate and propagate signals
+    wire [4:0] c;                   // intermediate carry signals between stages
+
+    
 endmodule
