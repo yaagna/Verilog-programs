@@ -21,7 +21,6 @@ always @(posedge clk) begin
         3'b111: ariu_out = {a[0], a[N-1:1]};
         default: ariu_out = a;
     endcase
-
 end
 
 endmodule
