@@ -21,8 +21,6 @@ always @(posedge clk) begin
         3'b111: log_out = (a==b) ? 4'b1111 : 4'b0000;
         default: log_out = a;
     endcase
-
 end
-
 
 endmodule
