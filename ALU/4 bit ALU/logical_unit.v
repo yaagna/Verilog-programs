@@ -5,7 +5,7 @@ module logical
     input wire clk;
     input wire [N-1:0] a, b;
     input wire [M-2:0] instruction;
-    output wire [N-1:0] log_out;
+    output reg [N-1:0] log_out;
 );
 
 always @(posedge clk) begin

@@ -5,7 +5,7 @@ module arithmetic
     input wire clk;
     input wire [N-1:0] a, b;
     input wire [M-2:0] instruction;
-    input wire [N-1:0] ariu_out;
+    output reg [N-1:0] ariu_out;
 );
 
 always @(posedge clk) begin
