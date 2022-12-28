@@ -8,3 +8,4 @@ module logical
     output wire [N-1:0] log_out;
 );
 
+endmodule
