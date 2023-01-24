@@ -13,5 +13,15 @@ module testbench;
 
     sr_latch sr0 (.s(s), .r(r), .clk(clk), .reset(reset), .q(q));
     
+    initial begin
+        reset <= 1;
+        #10 reset = 0;
+    end
+
+    initial begin
+        s <= 1;
+        r <= 0;
+
+    end
 
 endmodule
