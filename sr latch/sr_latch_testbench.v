@@ -13,12 +13,18 @@ module testbench;
 
     sr_latch sr0 (.s(s), .r(r), .clk(clk), .reset(reset), .q(q));
     
-    initial begin
+    initial 
+    begin
         reset <= 1;
         #10 reset = 0;
     end
 
-    initial begin
+    initial 
+    begin
+
+        $dumpfile("sr_latch.vcd");
+        $dumpvars(0, testbench);
+
         s <= 1;
         r <= 0;
 
@@ -32,3 +38,6 @@ module testbench;
     end
 
 endmodule
+
+//iverilog -o sr_latch_testbench.vvp sr_latch_testbench.v
+//vvp sr_latch_testbench.vvp
