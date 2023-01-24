@@ -22,6 +22,12 @@ module testbench;
         s <= 1;
         r <= 0;
 
+        #20 s <= 0;
+            r <= 0;
+        #20 s <= 0;
+            r <= 1;
+        #20 s <= 1;
+            r <= 1;
     end
 
 endmodule
