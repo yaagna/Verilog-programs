@@ -34,7 +34,8 @@ module testbench;
             r <= 1;
         #20 s <= 1;
             r <= 1;
-        $finish
+        
+        #40 $finish;
     end
 
 endmodule

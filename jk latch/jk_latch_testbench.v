@@ -32,5 +32,7 @@ module testbench;
             k <= 1;
         #20 j <= 1;
             k <= 1;
+
+        $40 $finish;
     end
 endmodule
