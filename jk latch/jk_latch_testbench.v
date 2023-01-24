@@ -6,7 +6,6 @@ module testbench;
     reg k;
     reg clk;
     reg reset;
-    output reg q;
 
     initial clk = 0;
     always #5 clk = ~clk;
@@ -33,6 +32,9 @@ module testbench;
         #20 j <= 1;
             k <= 1;
 
-        $40 $finish;
+        #40 $finish;
     end
 endmodule
+
+//iverilog -o jk_latch_testbench jk_latch_testbench.v
+//vvp jk_latch_testbench
