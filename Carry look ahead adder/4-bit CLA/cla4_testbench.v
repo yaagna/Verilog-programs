@@ -1,5 +1,6 @@
 // Test bench for 4 bit carry look ahead adder
 `include "cla4.v"
+`timescale 1ns/1ns
 
 module testbench;
     wire [3:0] y;

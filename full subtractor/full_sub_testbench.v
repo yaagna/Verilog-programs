@@ -1,5 +1,6 @@
 //Test bench for full subtractor
 `include "full_sub.v"
+`timescale 1ns/1ns
 
 module testbench;
     reg a, b, bin;

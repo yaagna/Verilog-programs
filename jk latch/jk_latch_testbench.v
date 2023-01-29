@@ -1,5 +1,6 @@
 //Testbench for JK latch
 `include "jk_latch.v"
+`timescale 1ns/1ns
 
 module testbench;
     reg j;

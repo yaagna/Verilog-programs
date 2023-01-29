@@ -1,5 +1,6 @@
 //Test bench for halfsubtactor
 `include "half_sub.v"
+`timescale 1ns/1ns
 
 module testbench;
     reg a, b;

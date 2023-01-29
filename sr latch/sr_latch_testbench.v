@@ -1,5 +1,6 @@
 //Testbench for SR latch
 `include "sr_latch.v"
+`timescale 1ns/1ns
 
 module testbench;
 
