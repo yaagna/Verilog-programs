@@ -1,5 +1,6 @@
 //Testbench for 2 to 1 multiplexer
 `include "mux2_1.v"
+`timescale 1ns/1ns
 
 module testbench;
     wire y;

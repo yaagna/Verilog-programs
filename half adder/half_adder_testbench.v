@@ -1,5 +1,6 @@
 //Test bench for halfadder
 `include "half_adder.v"
+`timescale 1ns/1ns
 
 module testbench;
     reg a, b;
