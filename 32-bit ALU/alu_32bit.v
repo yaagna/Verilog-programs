@@ -1,4 +1,5 @@
 // Verilog code for the 4-bit adder
+`timescale 1ns/1ns
 
 module alu32(clk, a, b, sel, out);
 
@@ -20,11 +21,6 @@ module alu32(clk, a, b, sel, out);
                 end
             
             else if (sel == 4'b0010)
-                begin
-                    out <= ~asss;
-                end
-            
-            else if (sel == 4'b0011)
                 begin
                     out <= a ^ b;
                 end
