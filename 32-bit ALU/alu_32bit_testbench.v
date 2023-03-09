@@ -5,7 +5,7 @@
 module testbench;
     reg clk;
     reg [31:0] a, b;
-    reg [1:0] sel;
+    reg [3:0] sel;
     wire [31:0] out;
 
     alu32 uut (clk, a, b, sel, out);
@@ -27,6 +27,8 @@ module testbench;
         a = 32'h1;
         b = 32'h1;
         sel = 2'b00;
+
+        
 
         #10$finish;
 

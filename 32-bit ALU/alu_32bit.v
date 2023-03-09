@@ -4,7 +4,7 @@ module alu32(clk, a, b, sel, out);
 
     input clk;
     input [31:0] a, b;
-    input [1:0] sel;
+    input [3:0] sel;
     output reg [31:0] out;
 
     always @(posedge clk)
