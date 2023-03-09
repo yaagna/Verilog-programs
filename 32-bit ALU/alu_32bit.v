@@ -9,9 +9,24 @@ module alu32(clk, a, b, sel, out);
 
     always @(posedge clk)
         begin
-            if (sel == 2'b00)
+            if (sel == 4'b0000)
                 begin 
-                    out <= a + b;
+                    out <= a & b;
+                end
+            
+            else if (sel == 4'b0001)
+                begin
+                    out <= a | b;
+                end
+            
+            else if (sel == 4'b0010)
+                begin
+                    out <= a ^ b;
+                end
+            
+            else if (sel == 4'b0011)
+                begin
+                    out <= ~a;
                 end
 
         end
