@@ -1,4 +1,5 @@
-// Verilog code for the 4-bit adder
+// Verilog code for the 32-bit adder
+
 `timescale 1ns/1ns
 
 module alu32(clk, a, b, sel, out, overflow);
