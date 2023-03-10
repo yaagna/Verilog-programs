@@ -11,18 +11,24 @@ module alu32(clk, a, b, sel, out);
 
     reg [31:0] g, p, c; //
 
-    //assign g = a & b; //
-    //assign p = a ^ b; //
-    //assign c[0] = add_sub ? ~b[0] : 1'b0; // initialize carry for substraction
+    always @* 
+        begin
+            g <= a & b; //
+            p <= a ^ b; //
+            c[0] = add_sub ? ~b[0] : 1'b0; // initialize carry for substraction
 
-    /*genvar i; //
-    generate //
-        for (i = 0; i <31; i = i + 1 ) // 
-            begin //
-                assign c[i+1] = g[i] | (p[i] & c[i]); //
-            end //
-    endgenerate // */
+        generate //
+            
+            genvar i; //
+    
+            for (i = 0; i <31; i = i + 1 ) // 
+                begin //
+                    assign c[i+1] = g[i] | (p[i] & c[i]); //
+                end //
+        endgenerate // 
 
+        end
+        
     always @(posedge clk)
         begin
             if (sel == 4'b0000) // Logical AND of inputs a and b
