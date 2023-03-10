@@ -28,7 +28,7 @@ module alu32(clk, a, b, sel, out);
         endgenerate // 
 
         end
-        
+
     always @(posedge clk)
         begin
             if (sel == 4'b0000) // Logical AND of inputs a and b
@@ -47,6 +47,46 @@ module alu32(clk, a, b, sel, out);
                 end
             
             else if (sel == 4'b0011) // Sum of inputs a and b
+                begin
+                    out <= a + b + c;
+                end
+            
+            else if (sel == 4'b0100) // Difference of inputs a and b
+                begin
+                    out <= a + (~b) + c + 1;
+                end
+
+            
+
+            // detect overflow
+            if (sel == 4'b0011) // Sum of inputs a and b
+                begin
+                    if (a[31] == b[31] && a[31] != out[31])
+                        begin
+                            overflow <= 1;
+                        end
+                    else
+                        begin
+                            overflow <= 0;
+                        end
+                end
+            
+            else if (sel == 4'b0100) // Difference of inputs a and b
+                begin
+                    if (a[31] != b[31] && a[31] != out[31])
+                        begin
+                            overflow <= 1;
+                        end
+                    else
+                        begin
+                            overflow <= 0;
+                        end
+                end
+
+            else                      // Logical AND, OR and XOR
+                begin
+                    overflow <= 0;
+                end
 
         end
 
