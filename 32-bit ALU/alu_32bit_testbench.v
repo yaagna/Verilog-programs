@@ -7,6 +7,7 @@ module testbench;
     reg [31:0] a, b;
     reg [3:0] sel;
     wire [31:0] out;
+    wire overflow;
 
     alu32 uut (clk, a, b, sel, out);
 
