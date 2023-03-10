@@ -8,6 +8,14 @@ module alu32(clk, a, b, sel, out);
     input [3:0] sel;
     output reg [31:0] out;
 
+    wire [31:0] g, p, c;
+
+    assign g = a & b;
+    assign p = a ^ b;
+    assign c[0] = add_sub ? ~b[0] : 1'b0; // initialize carry for substraction
+
+    
+
     always @(posedge clk)
         begin
             if (sel == 4'b0000) // Logical AND of inputs a and b
@@ -25,7 +33,11 @@ module alu32(clk, a, b, sel, out);
                     out <= a ^ b;
                 end
             
-            else if (sel == 4'b0011) // Sum of inputs a and b 
+            else if (sel == 4'b0011) // Sum of inputs a and b
+                begin
+                    
+                end
+
 
         end
 
