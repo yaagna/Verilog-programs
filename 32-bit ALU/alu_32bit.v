@@ -1,7 +1,7 @@
 // Verilog code for the 4-bit adder
 `timescale 1ns/1ns
 
-module alu32(clk, a, b, sel, out);
+module alu32(clk, a, b, sel, out, overflow);
 
     input clk;
     input [31:0] a, b;
@@ -13,19 +13,17 @@ module alu32(clk, a, b, sel, out);
 
     always @* 
         begin
-            g <= a & b; //
-            p <= a ^ b; //
-            c[0] = add_sub ? ~b[0] : 1'b0; // initialize carry for substraction
+            g = a & b; //
+            p = a ^ b; //
+            c[0] = (sel == 4'b0100) ? ~b[0] : 1'b0; // initialize carry for substraction
 
-        generate //
-            
-            genvar i; //
-    
-            for (i = 0; i <31; i = i + 1 ) // 
-                begin //
-                    assign c[i+1] = g[i] | (p[i] & c[i]); //
-                end //
-        endgenerate // 
+            generate //
+                genvar i; //
+                for (i = 0; i <31; i = i + 1 ) // 
+                    begin //
+                        assign c[i+1] = g[i] | (p[i] & c[i]); //
+                    end //
+            endgenerate // 
 
         end
 
