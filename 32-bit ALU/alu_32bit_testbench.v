@@ -9,7 +9,7 @@ module testbench;
     wire [31:0] out;
     wire overflow;
 
-    alu32 uut (clk, a, b, sel, out);
+    alu32 dut (.clk(clk), .a(a), .b(b), .sel(sel), .out(out), .overflow(overflow));
 
     initial clk = 0;
     always #1 clk = ~clk;
