@@ -20,7 +20,7 @@ module alu32(clk, a, b, sel, out, overflow);
             genvar i; //
             generate //
                 for (i = 0; i <31; i = i + 1 ) // 
-                    begin //
+                    begin : gen_loop //
                         assign c[i+1] = g[i] | (p[i] & c[i]); //
                     end //
             endgenerate // 
