@@ -17,37 +17,51 @@ module alu32(clk, a, b, sel, out, overflow);
             if (sel == 4'b0000) // Logical AND of inputs a and b
                 begin 
                     out <= a & b;
-                    overflow <= 0;
+                    //overflow <= 0;
                 end
             
             else if (sel == 4'b0001) // Locical OR of inputs a and b
                 begin
                     out <= a | b;
-                    overflow <= 0;
+                    //overflow <= 0;
                 end
             
             else if (sel == 4'b0010) // Logical XOR of inputs a and b
                 begin
                     out <= a ^ b;
-                    overflow <= 0;
+                    //overflow <= 0;
                 end
             
             else if (sel == 4'b0011) // Sum of inputs a and b
                 begin
                     sum <= a + b;
                     out <= sum[31:0];
-                    overflow <= sum[32];
+                    //overflow <= sum[32];
                 end
             
             else if (sel == 4'b0100) // Difference of inputs a and b
                 begin
                     sum <= a + (~b) + 1;
                     out <= sum[31:0];
+                    //overflow <= sum[32];
+                end
+
+            // overflow    
+            if (sel == 4'b0011)
+                begin
                     overflow <= sum[32];
                 end
-                
+
+            else if (sel == 4'b0100)
+                begin
+                    overflow <= sum[32];
+                end
             
-        
+            else
+                begin
+                    overflow <= 0;
+                end
+
         end
 
 endmodule
