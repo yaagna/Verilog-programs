@@ -1,5 +1,3 @@
-// This code is not working!!!
-
 ///////////////////////////////////////////////////
 // Verilog code of 16 bit carry look ahead adder
 ///////////////////////////////////////////////////
@@ -10,9 +8,9 @@ module cla16bit(a, b, cin, clk, sum, cout);
 
     input [15:0] a, b;
     input cin, clk;
-    output reg [15:0] sum;
-    output reg cout;
-    reg c1, c2, c3;
+    output [15:0] sum;
+    output cout;
+    wire c1, c2, c3;
 
     cla4bit cla1(.a(a[3:0]), .b(b[3:0]), .cin(cin), .clk(clk), .sum(sum[3:0]), .cout(c1));
     cla4bit cla2(.a(a[7:4]), .b(b[7:4]), .cin(c1), .clk(clk), .sum(sum[7:4]), .cout(c2));
